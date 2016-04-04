@@ -39,8 +39,3 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         Toast.makeText(this, "배고파요!", Toast.LENGTH_LONG).show();
     }
 }
-
-
-음식 사진도 512pxi
-
-512*512짜리 아이콘 만들어 오기(jpg)(파일명이 소문자여야 됌 01, 02)
