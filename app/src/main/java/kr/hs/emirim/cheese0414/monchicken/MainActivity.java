@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
      * @param v The view that was clicked.
      */
     @Override
-    public void onClick(View v) {
+    public void onClick(View v) { //버튼이 클릭되었을 때 자동으로 호출됨!
 
         String name=mName.getText().toString(); //toString으로 반드시 변환해서 해야함
 //        if (name==null) {   //명옥아! 여기서 null은 소문자얌! 아까 너 에러낫징!!!! 수업좀 들어라^0^ -천사
@@ -51,6 +51,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             intent.putExtra("name", name);
             intent.putExtra("age", 18);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left); //들어올때는 오른쪽, 나갈때는 왼쪽
         } catch(NullPointerException e) {
             Toast.makeText(this, "이름을 입력해 주세요!", Toast.LENGTH_LONG).show();
         } catch(Exception e) { //모든 예외의 어머니(?)
