@@ -21,6 +21,7 @@ public class SplashActivity extends ActionBarActivity {
             public void run() {
                 Intent intent=new Intent(getApplicationContext(), MainActivity.class); //액티비티를 실행시키려면 intent 객체가 있어야 한다.
                 startActivity(intent);
+                overridePendingTransition(0, R.anim.zoom_exit);
                 finish(); //현재 액티비티를 끝내준다
             }
         },3000);
