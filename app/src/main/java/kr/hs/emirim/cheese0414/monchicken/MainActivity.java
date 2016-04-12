@@ -23,9 +23,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
 
     @Override
-    protected void onResume() {
+    protected void onResume() { //액티비티가 다시 호출될때 불림
         super.onResume();
         mName.setText(null);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left); //들어올때는 오른쪽, 나갈때는 왼쪽
     }
 
     /**
